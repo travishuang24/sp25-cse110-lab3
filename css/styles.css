@@ -1,0 +1,198 @@
+/* General CSS Topics */
+
+/* Main color variable with a fallback*/
+:root {
+    --main-color: #3498db;
+}
+
+body {
+    color: var(--main-color, black); /* fallback */
+    background-color: hsl(210, 45%, 90%);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Color Styles */
+h1 {
+    color: rgb(255, 99, 71);
+}
+h2 {
+    color: rgba(124, 35, 66, 0.8);
+}
+h3 {
+    color: #8e44ad;
+}
+h4 {
+    color: hsla(130, 50%, 40%, 0.6);
+}
+h5 {
+    color: orange;
+}
+h6 {
+    color: color-mix(in srgb, red 50%, blue 50%)
+}
+strong {
+    color: color(display-p3 0.8 0.2 0.6 / 0.9);
+}
+
+/* Backgrounds */
+
+section {
+    background-color: #f4f4f4;
+}
+
+/* Units */
+/* Relative: em, rem, %, vw */
+/* Absolute: px, pt, in */
+p {
+    margin-top: 1em;
+    padding: 2rem;
+    font-size: 110%;
+    width: 80vw;
+    border: 1px solid black;
+}
+article {
+    margin-left: 25px;
+    padding-right: 12pt;
+    height: 2in;
+}
+
+/* Box Model */
+.container {
+    /* longhand */
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+  
+    margin: 10px 15px 20px 25px; /* shorthand */
+  
+    /* longhand */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  
+    padding: 5px 10px 15px 20px; /* shorthand */
+  
+    /* borders */
+    border-style: solid;
+    border-color: blue;
+    border-width: 3px;
+    border-radius: 10px;
+}
+.auto-margin-box {
+    width: 300px;
+    margin: auto; /* horizontally centers the box */
+    border: 2px dashed #555;
+    padding: 20px;
+}
+
+/* Text */
+h2 {
+    color: rgba(124, 35, 66, 0.8);
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Display */
+.hidden {
+    display: none;
+}
+.block {
+    display: block;
+}
+.inline {
+    display: inline;
+}
+.inline-block {
+    display: inline-block;
+}
+
+/* Sizing */
+img {
+    height: 150px;
+    width: 150px;
+    max-width: 100%;
+    min-width: 100px;
+}
+
+/* Position */
+.static-box {
+    position: static;
+}
+.fixed-box {
+    position: fixed;
+    top: 0;
+}
+.relative-box {
+    position: relative;
+    left: 20px;
+}
+.absolute-box {
+    position: absolute;
+    bottom: 10px;
+}
+.sticky-box {
+    position: sticky;
+    top: 0;
+}
+
+/* Pseudo Classes */
+button:hover {
+    background-color: green;
+}
+button:active {
+    background-color: red;
+}
+
+/* Layouts */
+
+
+/* Flexbox */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.flex-container > div {
+    background-color: #ddd;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    place-items: center;
+}
+.grid-container > div {
+    background-color: #eee;
+    padding: 14px;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    body {
+      background-color: lightgray;
+    }
+  
+    .flex-container {
+      flex-direction: column;
+    }
+}
+
+/* Google Fonts - Roboto */
+.roboto-unique {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+}
+  
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+}
