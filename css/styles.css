@@ -196,3 +196,64 @@ button:active {
     font-weight: 700; /* Bold weight */
     font-style: normal;
 }
+
+/* Selectors */
+.class-example {
+    color: blue;
+}
+#id-example {
+    color: green;
+}
+* {
+    box-sizing: border-box;
+}
+div {
+    border: 1px dashed red;
+}
+input[type="text"] {
+    background-color: yellow;
+}
+li:hover {
+    font-weight: bold;
+}
+p, span {
+    font-size: 18px;
+}
+article section {
+    background-color: #fafafa;
+}
+article > p {
+    background-color: lightblue;
+}
+article ~ p {
+    color: darkred;
+}
+article + p {
+    font-style: italic;
+}
+h1.special {
+    text-transform: uppercase;
+}
+section:has(h2) {
+    border: 2px dashed orange;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+a[href^="https"] {
+    color: green; 
+}
+
+/* Nested Selectors */
+.container-nested {
+    color: black;
+}
+.container-nested .child {
+    color: darkcyan;
+}
+
